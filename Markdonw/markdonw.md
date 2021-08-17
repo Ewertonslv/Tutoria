@@ -29,7 +29,8 @@ Para marcar um título, você vai usar ```#``` a quantidade de vezes que irá re
 ###### Título 6
 ```
 Resultado: 
-# IMAGEM AQUI
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/titulo_result.PNG)
 
 ### 2. Parágrafos e quebras de linha
 Para gerar parágrafos, basta você escrever o texto em uma linha:
@@ -45,18 +46,24 @@ Este é outro parágrafo.
 ```
 
 Resultado: 
-# IMAGEM AQUI
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/negrito_result.PNG)
 
 ### 4. Itálico
-*Esta texto está em itálico*
+```
+*Este texto está em itálico*
+```
 
+Resultado:
 
-Aqui forçamos adicionar todos os arquivos que foram modificados ou adicionados, enviamos o commit com a mensagem "Fim Tutorial." e depois enviamos para o repositorio.
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/result_italico.PNG)
 
 
 ## Para saber mais
 --- 
+[Documentação oficial Markdonw](https://daringfireball.net/projects/markdown/) 
 
+[Como o GitHub usa Markdonw](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github)
 ## Exercícios
 ---
 1. Deveremos propor aqui algum exercisio para a validação da metodologia usada na Tutoria, que tem como proposta DIY ( Do It Yourself ), onde o aluno deverá seguir os passos e no final ele tenha que usar o que foi ensinado para validar o ensino.
