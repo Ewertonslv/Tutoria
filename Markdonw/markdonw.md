@@ -74,6 +74,20 @@ Resultado:
 
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/result_italico.PNG)
 
+#### Links
+Para gerar links, você usa ```[Texto](Link)```. Dentro dos colchetes você coloca o texto do link, e dentro dos parênteses, você coloca a URL:
+
+```
+[Github](https://github.com/)
+```
+
+### Links automáticos
+Se o texto do seu link é o próprio link, você pode envolvê-lo entre ```<``` e ```>```, que o link será gerado automaticamente:
+
+```
+<https:https://github.com/>
+```
+
 
 ## Para saber mais
 --- 
