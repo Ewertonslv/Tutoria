@@ -74,7 +74,7 @@ Resultado:
 
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/result_italico.PNG)
 
-### Links
+### 5. Links
 
 Para gerar links, você usa ```[Texto](Link)```. Dentro dos colchetes você coloca o texto do link, e dentro dos parênteses, você coloca a URL:
 
@@ -82,14 +82,50 @@ Para gerar links, você usa ```[Texto](Link)```. Dentro dos colchetes você colo
 [Github](https://github.com/)
 ```
 
-### Links automáticos
+### 6. Links automáticos
 Se o texto do seu link é o próprio link, você pode envolvê-lo entre ```<``` e ```>```, que o link será gerado automaticamente:
 
 ```
 <https:https://github.com/>
 ```
+### Imagens
+Semelhante ao código para inserir um link, adicionando um ponto de exclamação ```!``` no inicio do código:
+
+```
+![Título da imagem](URL da imagem)
+```
 
 ### Tabelas 
+
+Você pode criar tabelas com barras verticais ```|``` e hifens ```-```. Os hifens são usados para criar o cabeçalho das colunas e as barras verticais, para separar as colunas:
+
+```
+| Cabeçalho 1| Cabeçalho 2|
+|------------|------------|
+|     x      |     z      |
+|     y      |     h      |
+```
+Resultado: 
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela1_result.png
+)
+
+As barras verticais em cada extremo da tabela são opcionais.
+
+As células podem ter largura variada e não precisam estar alinhadas perfeitamente com as colunas. Deve ter no mínimo três hifens em cada coluna da linha do cabeçalho.
+
+```
+| Comando | Descrição |
+| --- | --- |
+| git status | Lista de todos os arquivos modificados ou novos |
+| git diff | Mostra as diferenças do arquivo que não foram preparadas |
+```
+
+Resultado: 
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela2_result.png
+)
+
 
 ## Para saber mais
 --- 
