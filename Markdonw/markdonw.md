@@ -88,14 +88,14 @@ Se o texto do seu link é o próprio link, você pode envolvê-lo entre ```<``` 
 ```
 <https:https://github.com/>
 ```
-### Imagens
+### 7. Imagens
 Semelhante ao código para inserir um link, adicionando um ponto de exclamação ```!``` no inicio do código:
 
 ```
 ![Título da imagem](URL da imagem)
 ```
 
-### Tabelas 
+### 8. Tabelas 
 
 Você pode criar tabelas com barras verticais ```|``` e hifens ```-```. Os hifens são usados para criar o cabeçalho das colunas e as barras verticais, para separar as colunas:
 
@@ -124,6 +124,20 @@ As células podem ter largura variada e não precisam estar alinhadas perfeitame
 Resultado: 
 
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela2_result.png
+)
+
+
+Você ainda pode alinhar o texto à esquerda, direita ou no centro. Usando o ```:```. Assim como: 
+
+```
+|   Esquerda   |  Centralizado  |    Direita    |
+| :---         |     :---:      |          ---: |
+| x1           | x3             | x5            |
+| x2           | x4             | x6            |
+```
+Resultado: 
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela3_result.png
 )
 
 
