@@ -139,7 +139,7 @@ Resultado:
 
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela3_result.png
 )
-
+            
 
 ## Para saber mais
 --- 
