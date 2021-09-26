@@ -1,6 +1,6 @@
-# Tutoria Markdonw
+# Tutoria Markdown
 
-<strong>Objetivo:</strong> Mostrar de forma clara e objetiva o uso da linguagem Markdonw.
+<strong>Objetivo:</strong> Mostrar de forma clara e objetiva o uso da linguagem Markdown.
 
 <strong>Principais termos técnicos abordados:</strong> Markdonw, Visual Studio Code.
 
@@ -23,9 +23,9 @@ Assim como o próprio github, a linguagem markdonw é suportada por varios outro
 
 Além desses sites, o [Visual Studio Code](https://code.visualstudio.com/) possui uma extenção que permite uma visualização rápida do que está sendo digitado:
 
-![Markdonw preview Github Styling](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/exten%C3%A7%C3%A3o_markdonw_para_vs_code.PNG)
+![Markdown preview Github Styling](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/exten%C3%A7%C3%A3o_markdonw_para_vs_code.PNG)
 
-[Markdonw preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+[Markdown preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
 
 
 
@@ -46,7 +46,7 @@ Para marcar um título, você vai usar ```#``` a quantidade de vezes que irá re
 ```
 Resultado: 
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/titulo_result.PNG)
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/titulo_result.PNG)
 
 ### 2. Parágrafos e quebras de linha
 Para gerar parágrafos, basta você escrever o texto em uma linha:
@@ -63,7 +63,7 @@ Este é outro parágrafo.
 
 Resultado: 
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/negrito_result.PNG)
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/negrito_result.PNG)
 
 ### 4. Itálico
 ```
@@ -72,7 +72,7 @@ Resultado:
 
 Resultado:
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/result_italico.PNG)
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/result_italico.PNG)
 
 ### 5. Links
 
@@ -107,7 +107,7 @@ Você pode criar tabelas com barras verticais ```|``` e hifens ```-```. Os hifen
 ```
 Resultado: 
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela1_result.png
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/tabela1_result.png
 )
 
 As barras verticais em cada extremo da tabela são opcionais.
@@ -123,12 +123,17 @@ As células podem ter largura variada e não precisam estar alinhadas perfeitame
 
 Resultado: 
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela2_result.png
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/tabela2_result.png
 )
 
 
 Você ainda pode alinhar o texto à esquerda, direita ou no centro. Usando o ```:```. Assim como: 
 
+- Alinhado a esquerda: usar ```:``` no lado esquerdo (alinhamento padrão);
+
+- Alinhado a direita: usar ```:``` no lado direito;
+
+- Centralizado: usar ```:``` dos dois lados.
 ```
 |   Esquerda   |  Centralizado  |    Direita    |
 | :---         |     :---:      |          ---: |
@@ -137,17 +142,39 @@ Você ainda pode alinhar o texto à esquerda, direita ou no centro. Usando o ```
 ```
 Resultado: 
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdonw/imagens/tabela3_result.png
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/tabela3_result.png
 )
             
+### 9. Trechos de código
+
+Há dois modos de adicionar trechos de código ao Markdown:
+
+* Código em linha (inline): adicione um acento grave ```ˋ``` no início e no final do código.
+
+* Múltiplas linhas de código: envolva as linhas de código com três acentos graves ```ˋˋˋ``` ou três tils ```~~~```.
+
+~~~
+Esta é uma linha que contém um `código`.
+```
+Esta é uma linha de código
+```
+~~~
+
+Resultado:
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/codigo_result.png
+)
+
+
 
 ## Para saber mais
 --- 
-[Documentação oficial Markdonw](https://daringfireball.net/projects/markdown/) 
+[Documentação oficial Markdown](https://daringfireball.net/projects/markdown/) 
 
-[Como o GitHub usa Markdonw](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github)
+[Como o GitHub usa Markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github)
 
 [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
+
 ## Exercícios
 ---
-1. Deveremos propor aqui algum exercisio para a validação da metodologia usada na Tutoria, que tem como proposta DIY ( Do It Yourself ), onde o aluno deverá seguir os passos e no final ele tenha que usar o que foi ensinado para validar o ensino.
+1. Deveremos propor aqui algum exercicio para a validação da metodologia usada na Tutoria, que tem como proposta DIY ( Do It Yourself ), onde o aluno deverá seguir os passos e no final ele tenha que usar o que foi ensinado para validar o ensino.
