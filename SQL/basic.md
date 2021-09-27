@@ -31,6 +31,23 @@ Assim como o próprio github, a linguagem markdonw é suportada por varios outro
 3. []()
 4. []()
 
+## Tipos de dados   
+
+
+|   Tipo   |  Descrição  |    Armazenamento    |
+| :---:        |     :---:      |          :---: |
+| char(n)        | String de caracteres de tamanho fixo, máximo de 8000 caracteres.             |n             |
+| varchar(n)           |String de caracteres de tamanho variável, máximo de 8000 caracteres.                           |n|
+|nchar(n)      | Dados unicode de tamanho fixo, máximo de 4000 caracteres.| n|
+|nvarchar(n)|Dados unicode de tamanho variável, maximo de 4000 caracteres.| n|
+|bit|0, 1 ou nulo| |
+|tinyint| Números inteiros de 0 a 255| 1 byte|
+|smallint| Números inteiros de -32768 a 32767| 2 bytes|
+|int| Números inteiros entre -2,147,483,648 e 2,147,483,647| 4 bytes|
+|real|Números de ponto flutuante entre -3,4 x 10³⁸ e 3,4 x 10³⁸| 4 bytes|
+|date| data: aaaa/mm/dd||
+|time|hora: hh:mm:ss||
+|datetime|Combinação de data e hora. Formato: aaaa-mm-dd hh: mm: ss||
 
 ## DDL - Data Definition Language - Linguagem de definição de dados  
 ---
@@ -96,7 +113,23 @@ DROP TABLE db.Clientes;
 
 Remove a tabela "Clientes" do banco de dados "db";
 
-### 5. 
+### 5. ALTER TABLE
+
+Usado para alteração de tabelas já criadas no banco de dados, permitindo que os atributos sejam alterados ou que novos sejam adicionados. 
+
+- Sintaxe:
+~~~
+ALTER TABLE tabela_nome
+ADD atributo tipo_dado
+~~~
+
+- Exemplo: 					
+~~~	
+ALTER TABLE Clientes
+ADD idade INT
+~~~
+
+O atributo **idade** é adicionado a tabela **Clientes**.
 
 ### 6. 
 
