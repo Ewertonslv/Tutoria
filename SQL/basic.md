@@ -167,6 +167,27 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 
 - **DEFAULT**
 
+    É utilizado para inserir um valor padrão em uma coluna da tabela. Ele é inserido automaticamente nos registros, se nenhum outro valor for especificado.
+
+    - Exemplo 
+	
+    ```
+    CREATE TABLE empregado(
+    id INT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    endereco VARCHAR(50) DEFAULT ‘São Paulo’)
+    ```
+	
+    Define São paulo como valor padrão para o atributo "endereco".
+     
+    Para **remover o valor padrão** basta fazer um ALTER TABLE sem a restrição DEFAULT no campo em que havia sido atribuído.
+     
+     - Exemplo 
+     
+     ```
+     ALTER TABLE empregado
+     MODIFY COLUMN endereco Varchar(50);
+     ```
 
 ## Comandos básicos
 ---
