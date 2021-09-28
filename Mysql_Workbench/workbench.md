@@ -4,13 +4,13 @@ Neste artigo será mostrado como realizar a instalação do SGBD **MySql Server*
 
 Os passos realizados neste tutorial também se aplicam a distribuições equivalentes, assim como: Linux Debian, Linux Mint, entre outras.
 
-1. Baixar o pacote do repositório apt do MySQL através do terminal:
+### 1. Baixar o pacote do repositório apt do MySQL através do terminal:
 
 ```
 wget -c https://repo.mysql.com//mysql-apt-config_0.8.14-1_all.deb
 ```
 
-2. Instalar o pacote do repositório usando dpkg:
+### 2. Instalar o pacote do repositório usando dpkg:
 
 ```
 sudo dpkg -i mysql-apt-config_0.8.14-1_all.deb
@@ -31,3 +31,23 @@ Aguarde enquanto o mysql-apt-config é configurado:
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/Mysql_Workbench/imagens/3.png
 )
 
+### 3. Instalar o MySQL Server
+
+Atualize as listas de pacotes dos repositórios do sistema:
+
+```
+sudo apt update
+```
+
+Instale o pacote do MySQL Server:
+
+```
+sudo apt install mysql-server
+```
+
+Informe uma senha segura para configuração de root e pressione **OK**.
+
+![](https://github.com/Ewertonslv/Tutoria/blob/main/Mysql_Workbench/imagens/4.png
+)
+
+Repita a senha na tela seguinte para confirmar, e pressione novamente **OK**:

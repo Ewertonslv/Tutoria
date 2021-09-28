@@ -165,8 +165,6 @@ Resultado:
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/Markdown/imagens/codigo_result.png
 )
 
-> citação
-
 ## Para saber mais
 --- 
 [Documentação oficial Markdown](https://daringfireball.net/projects/markdown/) 
