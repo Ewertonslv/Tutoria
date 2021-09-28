@@ -82,8 +82,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     nome VARCHAR(15) NOT NULL,
 	matricula char(9) NOT NULL,
 	dataNasc DATE,
-	endereco VARCHAR(30)
-    );
+	endereco VARCHAR(30));
     ```
     Para o exemplo acima, a constraint **NOT NULL** impede que seja atribuído um valor nulo para os atributos nome e matricula.
 
@@ -96,8 +95,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     ```
     CREATE TABLE empregado(
     ID INT UNIQUE,
-    Name VARCHAR(50) NULL
-    );
+    Name VARCHAR(50) NULL;
     ```
     Para o exemplo acima, a constraint **UNIQUE** impede que o ID tenha valores duplicados em suas linhas. 
 
@@ -148,13 +146,24 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     ID_Pessoa int);
 
     ALTER TABLE Carro
-    ADD CONSTRAINT fk_PessoaMoto FOREIGN KEY (ID_Pessoa) REFERENCES Pessoa (ID_Pessoa)
+    ADD CONSTRAINT fk_PessoaMoto FOREIGN KEY (ID_Pessoa) REFERENCES Pessoa (ID_Pessoa);
     ```
 
     O segundo exemplo é idêntico ao primeiro, só muda que a tabela foi criada sem a chave estrangeira. Com o uso do ALTER TABLE é possivel adicionar novas chaves estrangeiras as tabelas do banco de dados.
 
 - **CHECK**
 
+    É utilizada para definir um intervalo de valores que podem ser inseridos nas colunas. A restição CHECK avalia os valores modificados e inseridos e se satisfazer a condiçao eles são inseridos na tabela. 
+
+    - Ewerton
+    ```
+    CREATE TABLE empregado(
+    id INT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    salario INT CHECK (salario > 0));
+    ```
+
+    Para o exemplo acima, o campo salário só aceitará valores maiores que 0. Caso contrário, qualquer outro valor fornecido será rejeitado. 
 
 - **DEFAULT**
 
@@ -224,10 +233,8 @@ Exclui o banco de dados "db" por completo.
 Comando utilizado para excluir uma tabela de um banco de dados.
 
 ```
-DROP TABLE db.Clientes;
+DROP TABLE nome_tabela;
 ```
-
-Remove a tabela "Clientes" do banco de dados "db";
 
 ### 5. ALTER TABLE
 
@@ -285,6 +292,14 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
 ALTER TABLE Clientes
 MODIFY nome(60);
 ``` 
+
+Também é possível alterar o tipo de um campo. Supondo que precisasse mudar atributo "nome" do tipo varchar para apenas char.
+
+- Exemplo
+```
+ALTER TABLE Clientes
+MODIFY nome CHAR(100);
+```
 
 ## Para saber mais
 --- 
