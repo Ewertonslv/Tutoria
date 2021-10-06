@@ -20,7 +20,7 @@ A **Linguagem SQL**(Structured Query Language = Linguagem de consulta estrurada)
 ---
 Você pode criar um arquivo SQL, em praticamente qualquer editor de texto simples, salvando com a extensão <strong>.sql</strong>. Será abordado algumas dicas de ferramentas onde é possível fazer a manipulação de bancos de dados. 
 
-![](https://github.com/Ewertonslv/Tutoria/blob/main/SQL/imagens/sqlimage.jpeg
+![](https://github.com/Ewertonslv/Tutoria/blob/main/SQL/imagens/sqlimage.png
 )
 
 Neste tutorial será abordado o **SQL DDL** (Linguagem de definição de dados), é uma das partes que completam o SQL. É um conjunto de instruções usado para criar e modificar as estruturas dos objetos armazenados no banco de dados.
