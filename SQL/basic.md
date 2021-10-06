@@ -20,6 +20,9 @@ A **Linguagem SQL**(Structured Query Language = Linguagem de consulta estrurada)
 ---
 Você pode criar um arquivo SQL, em praticamente qualquer editor de texto simples, salvando com a extensão <strong>.sql</strong>. Será abordado algumas dicas de ferramentas onde é possível fazer a manipulação de bancos de dados. 
 
+![](https://github.com/Ewertonslv/Tutoria/blob/main/SQL/imagens/sqlimage.jpeg
+)
+
 Neste tutorial será abordado o **SQL DDL** (Linguagem de definição de dados), é uma das partes que completam o SQL. É um conjunto de instruções usado para criar e modificar as estruturas dos objetos armazenados no banco de dados.
 
 ## Dicas de ferramentas
@@ -68,11 +71,51 @@ São 3 os comandos básicos DDL:
 
 Permite que você altere os atributos de uma determinada tabela ou adicione novos atributos.
 
+### Cláusulas
+
+➤ **FROM** - utilizada para especificar a tabela que se vai selecionar os registros.
+
+➤ **WHERE** - utilizada para especificar as condições que devem reunir os registros que serão selecionados.
+
+➤ **GROUP BY** - utilizada para especificar as condições que devem reunir os registros que serão selecionados.
+
+➤ **HAVING** - utilizada para expressar a condição que deve satisfazer cada grupo.
+
+➤ **ORDER BY** - utilizada para ordenar os registros selecionados com uma ordem específica.
+- Divide-se em dois: 
+
+    - **Modo ascendente (ASC)** - Ordena os valores do menor para o maior. É o padrão do ORDER BY. Portanto, nem é necessário estar explicito no comando. 
+
+    - **Modo descendente (DESC)** - Ordena os valores do maior para o menor. Diferente do comando ASC, ele deve ser explícito.
+
+
+➤ **DISTINCT** - utilizada para selecionar dados sem repetição.
+
+➤ **JOIN** - utilizada para juntar duas tabelas a partir de condições de combinação de registros.
+
+➤ **UNION** - combina os resultados de duas consultas SQL em uma única tabela para todas as linhas correspondentes.
+
+### Operadores de comparação
+
+|   Operador   |  Símbolo  |    Significado    |
+|    :---:     |     :---:      |     :---:     |
+| Igual a          | =             | Retorna verdadeiro caso o primeiro valor seja igual ao segundo.           |
+| Diferente de     | <>             | Retorna verdadeiro caso o primeiro valor seja diferente do segundo.           |
+|Menor que|<|Retorna verdadeiro caso o primeiro valor seja menor que o segundo.|
+|Maior que|>|Retorna verdadeiro caso o primeiro valor seja maior que o segundo.|
+|Menor ou igual a|<=|Retorna verdadeiro caso o primeiro valor seja menor ou igual ao segundo.
+|
+|Maior ou igual a|>=|Retorna verdadeiro caso o primeiro valor seja maior ou igual ao segundo.|
+
+
+
+
+
 ### Regras de integridade (Constraints) 
 
 São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de dados que são inseridos, e assim evitam que dados inválidos sejam inseridos no banco.
 
-- **NOT NULL**
+➤ **NOT NULL**
 
     Impede que valores nulos(NULL) sejam inseridos nas colunas de uma tabela, obrigando sempre a possuir um valor.
 
@@ -86,7 +129,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     ```
     Para o exemplo acima, a constraint **NOT NULL** impede que seja atribuído um valor nulo para os atributos nome e matricula.
 
-- **UNIQUE**
+➤ **UNIQUE**
 
     Usado para garantir que nenhum valor duplicado seja inserido em determinada coluna.
 
@@ -99,7 +142,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     ```
     Para o exemplo acima, a constraint **UNIQUE** impede que o ID tenha valores duplicados em suas linhas. 
 
-- **PRIMARY KEY**
+➤ **PRIMARY KEY**
 
     Identifica de forma única uma tabela no banco de dados. Não pode possuir valores duplicados e nem conter valores do tipo NULL.  
 
@@ -114,7 +157,8 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 
     No exemplo acima, a **chave primária** "id-estudante" referencía toda a tabela "estudante". 
 
-- **FOREIGN KEY**
+
+➤ **FOREIGN KEY**
 
     Uma chave estrangeira em uma tabela é um campo que aponta para uma chave primária em outra tabela.
 
@@ -151,7 +195,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 
     O segundo exemplo é idêntico ao primeiro, só muda que a tabela foi criada sem a chave estrangeira. Com o uso do ALTER TABLE é possivel adicionar novas chaves estrangeiras as tabelas do banco de dados.
 
-- **CHECK**
+➤ **CHECK**
 
     É utilizada para definir um intervalo de valores que podem ser inseridos nas colunas. A restição CHECK avalia os valores modificados e inseridos e se satisfazer a condiçao eles são inseridos na tabela. 
 
@@ -165,7 +209,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 
     Para o exemplo acima, o campo salário só aceitará valores maiores que 0. Caso contrário, qualquer outro valor fornecido será rejeitado. 
 
-- **DEFAULT**
+➤ **DEFAULT**
 
 
 ## Comandos básicos
