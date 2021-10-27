@@ -1,4 +1,4 @@
-# Tutoria SQL - Comandos básicos
+# Tutoria SQL - Introdução
 
 <strong>Objetivo:</strong> Mostrar de forma clara e objetiva o uso da linguagem SQL.
 
@@ -95,6 +95,17 @@ Permite que você altere os atributos de uma determinada tabela ou adicione novo
 
 ➤ **UNION** - combina os resultados de duas consultas SQL em uma única tabela para todas as linhas correspondentes.
 
+### Operadores aritméticos 
+
+
+|   Operador   |   Significado    |
+|    :---:     |        :---:     |
+| *         |   Multiplicação   |
+|+          | Soma              |
+|-          |Subtração          |
+|/          |Divisão            |
+
+
 ### Operadores de comparação
 
 |   Operador   |  Símbolo  |    Significado    |
@@ -103,8 +114,7 @@ Permite que você altere os atributos de uma determinada tabela ou adicione novo
 | Diferente de     | <>             | Retorna verdadeiro caso o primeiro valor seja diferente do segundo.           |
 |Menor que|<|Retorna verdadeiro caso o primeiro valor seja menor que o segundo.|
 |Maior que|>|Retorna verdadeiro caso o primeiro valor seja maior que o segundo.|
-|Menor ou igual a|<=|Retorna verdadeiro caso o primeiro valor seja menor ou igual ao segundo.
-|
+|Menor ou igual a|<=|Retorna verdadeiro caso o primeiro valor seja menor ou igual ao segundo.|
 |Maior ou igual a|>=|Retorna verdadeiro caso o primeiro valor seja maior ou igual ao segundo.|
 
 
@@ -117,9 +127,9 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 
 ➤ **NOT NULL**
 
-    Impede que valores nulos(NULL) sejam inseridos nas colunas de uma tabela, obrigando sempre a possuir um valor.
+Impede que valores nulos(NULL) sejam inseridos nas colunas de uma tabela, obrigando sempre a possuir um valor.
 
-    - Exemplo
+- Exemplo
     ```
     CREATE TABLE empregado(
     nome VARCHAR(15) NOT NULL,
@@ -127,26 +137,26 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 	dataNasc DATE,
 	endereco VARCHAR(30));
     ```
-    Para o exemplo acima, a constraint **NOT NULL** impede que seja atribuído um valor nulo para os atributos nome e matricula.
+Para o exemplo acima, a constraint **NOT NULL** impede que seja atribuído um valor nulo para os atributos nome e matricula.
 
 ➤ **UNIQUE**
 
-    Usado para garantir que nenhum valor duplicado seja inserido em determinada coluna.
+Usado para garantir que nenhum valor duplicado seja inserido em determinada coluna.
 
-    - Exemplo
+- Exemplo
         
     ```
     CREATE TABLE empregado(
     ID INT UNIQUE,
     Name VARCHAR(50) NULL;
     ```
-    Para o exemplo acima, a constraint **UNIQUE** impede que o ID tenha valores duplicados em suas linhas. 
+Para o exemplo acima, a constraint **UNIQUE** impede que o ID tenha valores duplicados em suas linhas. 
 
 ➤ **PRIMARY KEY**
 
-    Identifica de forma única uma tabela no banco de dados. Não pode possuir valores duplicados e nem conter valores do tipo NULL.  
+Identifica de forma única uma tabela no banco de dados. Não pode possuir valores duplicados e nem conter valores do tipo NULL.  
 
-    - Exemplo
+- Exemplo
 
     ```
     CREATE TABLE estudante (
@@ -155,32 +165,34 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 	PRIMARY KEY (id-estudante));
     ```
 
-    No exemplo acima, a **chave primária** "id-estudante" referencía toda a tabela "estudante". 
+No exemplo acima, a **chave primária** "id-estudante" referencía toda a tabela "estudante". 
 
 
 ➤ **FOREIGN KEY**
 
-    Uma chave estrangeira em uma tabela é um campo que aponta para uma chave primária em outra tabela.
+Uma chave estrangeira em uma tabela é um campo que aponta para uma chave primária em outra tabela.
 
-    É possível ter mais de uma (ou nenhuma) em uma tabela.
+É possível ter mais de uma (ou nenhuma) em uma tabela.
 
-    - Exemplo 1
+- Exemplo 1
 
-    Para facilitar a compreensão, usaremos como exemplo duas tabelas: **Pessoa e Moto**. Para montarmos um relacionamento entre elas poderíamos ter na tabela Moto o campo ID_Pessoa fazendo referência à chave primária da tabela Pessoa.
+Para facilitar a compreensão, usaremos como exemplo duas tabelas: **Pessoa e Moto**. Para montarmos um relacionamento entre elas poderíamos ter na tabela Moto o campo ID_Pessoa fazendo referência à chave primária da tabela Pessoa.
 
-    ```
-    CREATE TABLE Moto(
-    ID_Moto int PRIMARY KEY AUTOINCREMENT,
-    Nome varchar(255),
-    Marca varchar(255),
-    ID_Pessoa int,
-    CONSTRAINT fk_PessoaMoto FOREIGN KEY (ID_Pessoa) REFERENCES Pessoa (ID_Pessoa));
-    ```
-    **A chave estrangeira foi especificada no CREATE TABLE**
 
-    O campo ```ID_Pessoa``` representa a chave estrangeira, recebendo o valor do campo ```ID_Pessoa```(chave primária na tabela Pessoa) que seria o "dono" da moto.
+~~~
+CREATE TABLE Moto(
+ID_Moto int PRIMARY KEY AUTOINCREMENT,
+Nome varchar(255),
+Marca varchar(255),
+ID_Pessoa int,
+CONSTRAINT fk_PessoaMoto FOREIGN KEY (ID_Pessoa) REFERENCES Pessoa (ID_Pessoa));
+~~~
 
-    - Exemplo 2
+**A chave estrangeira foi especificada no CREATE TABLE**
+
+O campo ```ID_Pessoa``` representa a chave estrangeira, recebendo o valor do campo ```ID_Pessoa```(chave primária na tabela Pessoa) que seria o "dono" da moto.
+
+- Exemplo 2
 
     ```
     CREATE TABLE Moto(
@@ -193,13 +205,14 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     ADD CONSTRAINT fk_PessoaMoto FOREIGN KEY (ID_Pessoa) REFERENCES Pessoa (ID_Pessoa);
     ```
 
-    O segundo exemplo é idêntico ao primeiro, só muda que a tabela foi criada sem a chave estrangeira. Com o uso do ALTER TABLE é possivel adicionar novas chaves estrangeiras as tabelas do banco de dados.
+O segundo exemplo é idêntico ao primeiro, só muda que a tabela foi criada sem a chave estrangeira. Com o uso do ALTER TABLE é possivel adicionar novas chaves estrangeiras as tabelas do banco de dados.
 
 ➤ **CHECK**
 
-    É utilizada para definir um intervalo de valores que podem ser inseridos nas colunas. A restição CHECK avalia os valores modificados e inseridos e se satisfazer a condiçao eles são inseridos na tabela. 
+É utilizada para definir um intervalo de valores que podem ser inseridos nas colunas. A restição CHECK avalia os valores modificados e inseridos e se satisfazer a condiçao eles são inseridos na tabela. 
 
-    - Ewerton
+- Exemplo
+
     ```
     CREATE TABLE empregado(
     id INT PRIMARY KEY,
@@ -207,13 +220,13 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     salario INT CHECK (salario > 0));
     ```
 
-    Para o exemplo acima, o campo salário só aceitará valores maiores que 0. Caso contrário, qualquer outro valor fornecido será rejeitado. 
+Para o exemplo acima, o campo salário só aceitará valores maiores que 0. Caso contrário, qualquer outro valor fornecido será rejeitado. 
 
 ➤ **DEFAULT**
 
-    É utilizado para inserir um valor padrão em uma coluna da tabela. Ele é inserido automaticamente nos registros, se nenhum outro valor for especificado.
+É utilizado para inserir um valor padrão em uma coluna da tabela. Ele é inserido automaticamente nos registros, se nenhum outro valor for especificado.
 
-    - Exemplo 
+- Exemplo 
 	
     ```
     CREATE TABLE empregado(
@@ -222,149 +235,17 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
     endereco VARCHAR(50) DEFAULT ‘São Paulo’)
     ```
 	
-    Define São paulo como valor padrão para o atributo "endereco".
+Define São paulo como valor padrão para o atributo "endereco".
      
-    Para **remover o valor padrão** basta fazer um ALTER TABLE sem a restrição DEFAULT no campo em que havia sido atribuído.
+Para **remover o valor padrão** basta fazer um ALTER TABLE sem a restrição DEFAULT no campo em que havia sido atribuído.
      
-     - Exemplo 
+- Exemplo 
      
      ```
      ALTER TABLE empregado
      MODIFY COLUMN endereco Varchar(50);
      ```
 
-## Comandos básicos
----
-
-### 1. CREATE DATABASE
-
-Comando utilizado para criar um novo banco de dados e suas respectivas dependências. 
-
-- Sintaxe 
-```
-CREATE DATABASE nome_bd;
-```
-
-- Exemplo
-
-```CREATE DATABASE clientes_db;```
-
-Com esse código é possivel criar um banco de dados chamado "clientes_db".
-
-### 2. CREATE TABLE 
-
-Sintaxe utilizada para criar uma nova tabela(é necessário já possuir um banco de dados) com seus respectivos atributos.
-
-- Sintaxe 
-```
-CREATE TABLE nome_tabela(
-nome_campo_1  tipo_1,
-nome_campo_2  tipo_2, 
-...
-nome_campo_n tipo_n, 
-PRIMARY KEY ( campo_x,..));
-```
-- Exemplo 
-```
-CREATE TABLE Clientes(
-cod_cliente INT NOT NULL AUTO_INCREMENT,
-nome VARCHAR (40) NOT NULL,
-dt_nasc DATE,
-contato CHAR (11),
-PRIMARY KEY (cod_cliente));
-```
- 
-É criado uma tabela chamada "Clientes" com quatro atributos(cod_cliente, nome, dt_nasc, contato). 
-
-No exemplo acima vimos a seguinte declaração na criação da tabela:
-
-```
-PRIMARY KEY (cod_cliente);
-```
-
-### 3. DROP DATABASE
-
-Comando utilizado para excluir um banco de dados. 
-
-```
-DROP DATABASE db;
-```
-
-Exclui o banco de dados "db" por completo.
-
-
-### 4. DROP TABLE
-
-Comando utilizado para excluir uma tabela de um banco de dados.
-
-```
-DROP TABLE nome_tabela;
-```
-
-### 5. ALTER TABLE
-
-Usado para alteração de tabelas já criadas no banco de dados, permitindo que os atributos sejam alterados ou que novos sejam adicionados. 
-
-#### 5.1 ADD
-
-1. Pode-se utilizar a cláusula ADD para adicionar novos campos a uma tabela. 
-
-    - Sintaxe:
-    ~~~
-    ALTER TABLE tabela_nome
-    ADD atributo tipo_dado
-    ~~~
-
-    - Exemplo: 					
-    ~~~	
-    ALTER TABLE Clientes
-    ADD idade INT
-    ~~~
-
-    O atributo **idade** é adicionado a tabela **Clientes**.
-
-2. É possível **adicionar uma chave primária** com o comando ADD.
-
-    - Exemplo 
-    ```
-    ALTER TABLE Clientes
-    ADD PRIMARY KEY(nome);
-    ```
-
-3. É possível eliminar uma coluna com os comandos ALTER e DROP
-
-    - Exemplo
-    ```
-    ALTER TABLE Nome_Tabela
-    DROP nome_campo;
-    ```
-    Alguns SGBD'S utilizando o comando CROP COLLUMN ao invés de somente drop.
-
-4. Pode-se mudar o nome da respectiva tabela com o comando **rename to**
-    
-    - Exemplo
-    ```
-    ALTER TABLE Clientes
-    rename to novo_Nome_Da_Tabela;
-    ```
-
-#### 5.2 MODIFY
-
-É possível utilizar o comando MODIFY para alterar o tamanho dos campos que já foram definidos. Por exemplo: no atributo nome que foi definido com tamanho 40 e deve ser aumentado para 60. 
-
-- Exemplo
-```
-ALTER TABLE Clientes
-MODIFY nome(60);
-``` 
-
-Também é possível alterar o tipo de um campo. Supondo que precisasse mudar atributo "nome" do tipo varchar para apenas char.
-
-- Exemplo
-```
-ALTER TABLE Clientes
-MODIFY nome CHAR(100);
-```
 
 ## Para saber mais
 --- 
@@ -373,6 +254,7 @@ MODIFY nome CHAR(100);
 []()
 
 []()
+
 ## Exercícios
 ---
 1. Deveremos propor aqui algum exercisio para a validação da metodologia usada na Tutoria, que tem como proposta DIY ( Do It Yourself ), onde o aluno deverá seguir os passos e no final ele tenha que usar o que foi ensinado para validar o ensino.
