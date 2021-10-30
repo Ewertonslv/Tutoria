@@ -1,5 +1,4 @@
 ## Tutorial algebra relacional
-[IDs de títulos](#Meu-título-#1)
 
 A Álgebra Relacional é uma linguagem de consulta formal e procedural, ou seja, o usuário dá as instruções ao sistema para que o mesmo realize uma seqüência de operações na base de dados para calcular o resultado desejado.
 
@@ -34,89 +33,101 @@ Possui como entrada uma ou duas relações e retorna, como resultado, um nova re
 |"ou" lógico|V|
 |Não||
 
-### Meu título {#1}
+
+**Relação** = Tabela, entidade, na terminologia formal de banco de dados.
+
+**Tupla** = Linha da tabela, registro, na terminologia formal de banco de dados.
 
 ### 1. Seleção 
 
 - Sintaxe
 
-```
-Sintaxe:  σ<condição de seleção>(<Relação>)
-```
-Condição: < atributo > < op > < constante > ou < atributo > < op > < atributo >
+```σ<condição de seleção>(<Relação>)```
 
-< op > = {=, >, <, ≤, ≥, ≠}
+Condição: < atributo > < op > < constante > ou < atributo > < op > < atributo > < op > = {=, >, <, ≤, ≥, ≠}
 
 Na condição pode ser utilizado os conectivos booleanos AND, OR e NOT. 
 
+**Alunos**
+|id	|nome	|sexo|
+|:---: |:----:| :----:|
+|1| 	Manoel|	M|
+|2 	|Jasmin	|F|
+|3	|Augusto|	M|
+|4	|Janete	|F|
+
+**Ex1. Selecione as tuplas de alunos onde nome = Augusto**
+
+**σnome = 'Augusto' (Alunos)**
+- Resultado: 
+
+|id	|nome	|sexo|
+|:---: |:----:| :----:
+|3	|Augusto|	M|
+
+**Ex2. Selecione as tuplas de Alunos com id > 1 e id < 4**
+
+**σid > 1 ^ id < 4(Alunos)**
+
+- Resultado
+
+|id	|nome	|sexo|
+|:---: |:----:| :----:
+|2 	|Jasmin	|F|
+|3	|Augusto|	M|
 ### 2. Projeção 
 
 - Sintaxe
 
-```
-π <LISTA DE ATRIBUTOS>(Relação)
-```
+```π <LISTA DE ATRIBUTOS>(Relação)```
 
 ### 3. União 
 
 - Sintaxe
 
-```
-Relação1 ∪ Relação2 ( R1 ∪ R2)
-```
+```Relação1 ∪ Relação2 ( R1 ∪ R2)```
 
 ### 4. Intersecção
 
 - Sintaxe
 
-```
-relação1 ∩ relação2 ( R1 ∩ R2 )
-```
+```relação1 ∩ relação2 ( R1 ∩ R2 )```
 
 ### 5. Diferença 
 
 - Sintaxe
 
-```
-relação1 - relação2 ( R1 - R2 )
-```
+```relação1 - relação2 ( R1 - R2 )```
 
 ### 6. Produto cartesiano
 
 - Sintaxe
 
-```
-relação1 x relação2 ( R1 x R2 )
-```
+```relação1 x relação2 ( R1 x R2 )```
 
 ### 7. Junção
 
 - Sintaxe
 
-```
-relação1 |x|<condição de junção> relação2
-```
+```relação1 |x|<condição de junção> relação2```
 
 ### 8. Divisão 
 
 - Sintaxe
 
-```
-relação1 ÷ relação2
-```
+```relação1 ÷ relação2```
+
 
 ### 9. Renomeação 
 
 - Sintaxe
 
-```
-ρ<novo nome> (relação)
-```
+
+```ρ<novo nome> (relação)```
+
 
 ### 10. Atribuição 
 
 - Sintaxe
 
-```
-variável ↤ relação
-```
+```variável ↤ relação```
