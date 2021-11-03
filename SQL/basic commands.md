@@ -13,7 +13,9 @@ CREATE DATABASE nome_bd;
 
 - Exemplo
 
-```CREATE DATABASE clientes_db;```
+```SQL
+CREATE DATABASE clientes_db;
+```
 
 Com esse código é possivel criar um banco de dados chamado "clientes_db".
 
@@ -22,7 +24,8 @@ Com esse código é possivel criar um banco de dados chamado "clientes_db".
 Sintaxe utilizada para criar uma nova tabela(é necessário já possuir um banco de dados) com seus respectivos atributos.
 
 - Sintaxe 
-```
+
+```SQL
 CREATE TABLE nome_tabela(
 nome_campo_1  tipo_1,
 nome_campo_2  tipo_2, 
@@ -30,8 +33,10 @@ nome_campo_2  tipo_2,
 nome_campo_n tipo_n, 
 PRIMARY KEY ( campo_x,..));
 ```
+
 - Exemplo 
-```
+
+```SQL
 CREATE TABLE Clientes(
 cod_cliente INT NOT NULL AUTO_INCREMENT,
 nome VARCHAR (40) NOT NULL,
@@ -44,7 +49,7 @@ PRIMARY KEY (cod_cliente));
 
 No exemplo acima vimos a seguinte declaração na criação da tabela:
 
-```
+```SQL
 PRIMARY KEY (cod_cliente);
 ```
 
@@ -52,7 +57,7 @@ PRIMARY KEY (cod_cliente);
 
 Comando utilizado para excluir um banco de dados. 
 
-```
+```SQL
 DROP DATABASE db;
 ```
 
@@ -63,7 +68,7 @@ Exclui o banco de dados "db" por completo.
 
 Comando utilizado para excluir uma tabela de um banco de dados.
 
-```
+```SQL
 DROP TABLE nome_tabela;
 ```
 
@@ -76,13 +81,15 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
 1. Pode-se utilizar a cláusula ADD para adicionar novos campos a uma tabela. 
 
     - Sintaxe:
-    ~~~
+
+    ~~~SQL
     ALTER TABLE tabela_nome
     ADD atributo tipo_dado
     ~~~
 
-    - Exemplo: 					
-    ~~~	
+    - Exemplo: 		
+
+    ~~~	SQL
     ALTER TABLE Clientes
     ADD idade INT
     ~~~
@@ -92,7 +99,8 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
 2. É possível **adicionar uma chave primária** com o comando ADD.
 
     - Exemplo 
-    ```
+
+    ```SQL
     ALTER TABLE Clientes
     ADD PRIMARY KEY(nome);
     ```
@@ -100,7 +108,8 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
 3. É possível eliminar uma coluna com os comandos ALTER e DROP
 
     - Exemplo
-    ```
+
+    ```SQL
     ALTER TABLE Nome_Tabela
     DROP nome_campo;
     ```
@@ -109,7 +118,8 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
 4. Pode-se mudar o nome da respectiva tabela com o comando **rename to**
     
     - Exemplo
-    ```
+
+    ```SQL
     ALTER TABLE Clientes
     rename to novo_Nome_Da_Tabela;
     ```
@@ -119,7 +129,8 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
 É possível utilizar o comando MODIFY para alterar o tamanho dos campos que já foram definidos. Por exemplo: no atributo nome que foi definido com tamanho 40 e deve ser aumentado para 60. 
 
 - Exemplo
-```
+
+```SQL
 ALTER TABLE Clientes
 MODIFY nome(60);
 ``` 
@@ -127,7 +138,8 @@ MODIFY nome(60);
 Também é possível alterar o tipo de um campo. Supondo que precisasse mudar atributo "nome" do tipo varchar para apenas char.
 
 - Exemplo
-```
+
+```SQL
 ALTER TABLE Clientes
 MODIFY nome CHAR(100);
 ``` 

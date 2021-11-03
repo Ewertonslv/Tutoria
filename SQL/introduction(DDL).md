@@ -25,14 +25,14 @@ Você pode criar um arquivo SQL, em praticamente qualquer editor de texto simple
 
 Neste tutorial será abordado o **SQL DDL** (Linguagem de definição de dados), é uma das partes que completam o SQL. É um conjunto de instruções usado para criar e modificar as estruturas dos objetos armazenados no banco de dados.
 
-## Dicas de ferramentas
+## Bancos de dados mais famosos:
 ---
 
-
-1. [MySQL Workbench](https://www.mysql.com/products/workbench/)
-2. []()
-3. []()
-4. []()
+1. [postgresql](https://www.postgresql.org/)
+2. [Oracle](https://www.oracle.com/br/index.html)
+3. [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
+4. [MySQL](https://www.mysql.com/)
+5. [MariaDB](https://mariadb.org/)
 
 ## Tipos de dados   
 
@@ -130,7 +130,7 @@ São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de 
 Impede que valores nulos(NULL) sejam inseridos nas colunas de uma tabela, obrigando sempre a possuir um valor.
 
 - Exemplo
-    ```
+    ```SQL
     CREATE TABLE empregado(
     nome VARCHAR(15) NOT NULL,
 	matricula char(9) NOT NULL,
@@ -145,7 +145,7 @@ Usado para garantir que nenhum valor duplicado seja inserido em determinada colu
 
 - Exemplo
         
-    ```
+    ```SQL
     CREATE TABLE empregado(
     ID INT UNIQUE,
     Name VARCHAR(50) NULL;
@@ -158,7 +158,7 @@ Identifica de forma única uma tabela no banco de dados. Não pode possuir valor
 
 - Exemplo
 
-    ```
+    ```SQL
     CREATE TABLE estudante (
 	nome char(15) NOT NULL,
 	id-estudante (10) NOT NULL,
@@ -179,7 +179,7 @@ Uma chave estrangeira em uma tabela é um campo que aponta para uma chave primá
 Para facilitar a compreensão, usaremos como exemplo duas tabelas: **Pessoa e Moto**. Para montarmos um relacionamento entre elas poderíamos ter na tabela Moto o campo ID_Pessoa fazendo referência à chave primária da tabela Pessoa.
 
 
-~~~
+~~~SQL
 CREATE TABLE Moto(
 ID_Moto int PRIMARY KEY AUTOINCREMENT,
 Nome varchar(255),
@@ -194,7 +194,7 @@ O campo ```ID_Pessoa``` representa a chave estrangeira, recebendo o valor do cam
 
 - Exemplo 2
 
-    ```
+    ```SQL
     CREATE TABLE Moto(
     ID_Moto int PRIMARY KEY AUTOINCREMENT,
     Nome varchar(255),
@@ -213,7 +213,7 @@ O segundo exemplo é idêntico ao primeiro, só muda que a tabela foi criada sem
 
 - Exemplo
 
-    ```
+    ```SQL
     CREATE TABLE empregado(
     id INT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
@@ -228,7 +228,7 @@ Para o exemplo acima, o campo salário só aceitará valores maiores que 0. Caso
 
 - Exemplo 
 	
-    ```
+    ```SQL
     CREATE TABLE empregado(
     id INT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
