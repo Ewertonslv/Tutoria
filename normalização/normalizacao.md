@@ -12,7 +12,7 @@ Para uma tabela com atributos repetidos, deve-se criar uma nova tabela com a cha
 | Código | Nome |Endereço| Telefone|
 | :---: | :---:| :---:| :---:|
 |1  | Ewerton Silva  | Rua de cima 123 centro|31903290323 31903247890|
-|2  | Manoel Fernandes   | Rua de baixo 321 Centro|   31290482300  31298473627|
+|2  | Manoel Fernandes   | Rua de baixo 321 Centro|   31290482300 31298473627|
 
 
 No exemplo acima podemos perceber dois erros:
@@ -35,7 +35,7 @@ Com isso, a tabela acima encontra-se na primeira forma normal. Mas, para a colun
 |2|31290482300|
 |2|31298473627|
 
-Com isso as tabelas ficam na primeira forma normal.
+Dessa forma, as tabelas ficam na primeira forma normal.
 
 
 ### NF2 - Segunda forma de normalização 
@@ -76,4 +76,26 @@ Para estar na terceira forma normal, precisa estar na primeira e na segunda form
 Após colocada na segunda forma normal, a tabela não pode ter um atributo **(não-chave)** que determina outro atributo. Ou seja, não pode haver uma dependência transitiva de um atributo não-chave sobre a chave primaria.
 
 Dependêndia transitiva é uma dependência entre dois ou mais atributos não-chave.
+
+Se a tabela possuir algum atributo não-chave determinando outro atributo, deve-se idêntifica-lo e remove-lo.
+
+| id_pedido | id_produto | qtd| valor_unitario | subtotal|
+| :---: | :---:| :---:| :---: | :---:|
+|0010  | 001  |6|100,00|600,00|
+|0020  | 002  | 8|150,00|1200,00|
+|0030| 003|10|175,00|1750,00|
+
+No exemplo acima podemos perceber que a coluna "subtotal" depende da multiplicação da coluna "qtd" e "valor_unitario", sendo assim, a coluna "subtotal" depende de outras colunas **não-chave**.
+
+Para normalizar conforme a terceira forma normal devemos remover a coluna "subtotal"
+
+| id_pedido | id_produto | qtd| valor_unitario | 
+| :---: | :---:| :---:| :---: |
+|0010  | 001  |6|100,00|
+|0020  | 002  | 8|150,00|
+|0030| 003|10|175,00|
+
+Com isso a tabela estar na terceira forma normal.
+
+Para obter valores a partir da comutação de outros atributos podemos utilizar outros meios de processamento de dados da tabela(views, por exemplo). 
 
