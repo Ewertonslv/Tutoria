@@ -7,7 +7,7 @@
 Comando utilizado para criar um novo banco de dados e suas respectivas dependências. 
 
 - Sintaxe 
-```
+```SQL
 CREATE DATABASE nome_bd;
 ```
 
@@ -19,7 +19,22 @@ CREATE DATABASE clientes_db;
 
 Com esse código é possivel criar um banco de dados chamado "clientes_db".
 
-### 2. CREATE TABLE 
+### 2. USE DATABASE
+Após criar o banco de dados precisa informar ao SGBD que quer utilizar aquele banco, senão fizer isso, todos os comandos executados serãm criados no database padrão do SGBD. 
+
+- Sintaxe
+
+```SQL
+USE DATABASE nome_db;
+```
+
+- Exemplo
+
+```SQL
+USE DATABASE nome_bd;
+```
+
+### 3. CREATE TABLE 
 
 Sintaxe utilizada para criar uma nova tabela(é necessário já possuir um banco de dados) com seus respectivos atributos.
 
@@ -53,7 +68,7 @@ No exemplo acima vimos a seguinte declaração na criação da tabela:
 PRIMARY KEY (cod_cliente);
 ```
 
-### 3. DROP DATABASE
+### 4. DROP DATABASE
 
 Comando utilizado para excluir um banco de dados. 
 
@@ -64,7 +79,7 @@ DROP DATABASE db;
 Exclui o banco de dados "db" por completo.
 
 
-### 4. DROP TABLE
+### 5. DROP TABLE
 
 Comando utilizado para excluir uma tabela de um banco de dados.
 
@@ -72,11 +87,11 @@ Comando utilizado para excluir uma tabela de um banco de dados.
 DROP TABLE nome_tabela;
 ```
 
-### 5. ALTER TABLE
+### 6. ALTER TABLE
 
 Usado para alteração de tabelas já criadas no banco de dados, permitindo que os atributos sejam alterados ou que novos sejam adicionados. 
 
-#### 5.1 ADD
+#### 6.1 ADD
 
 1. Pode-se utilizar a cláusula ADD para adicionar novos campos a uma tabela. 
 
@@ -124,7 +139,7 @@ Usado para alteração de tabelas já criadas no banco de dados, permitindo que 
     rename to novo_Nome_Da_Tabela;
     ```
 
-#### 5.2 MODIFY
+#### 6.2 MODIFY
 
 É possível utilizar o comando MODIFY para alterar o tamanho dos campos que já foram definidos. Por exemplo: no atributo nome que foi definido com tamanho 40 e deve ser aumentado para 60. 
 
