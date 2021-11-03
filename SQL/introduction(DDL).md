@@ -18,7 +18,7 @@ A **Linguagem SQL**(Structured Query Language = Linguagem de consulta estrurada)
 É implementada em todos os sistemas de bancos de dados relacionais existentes.
 
 ---
-Você pode criar um arquivo SQL, em praticamente qualquer editor de texto simples, salvando com a extensão <strong>.sql</strong>. Será abordado algumas dicas de ferramentas onde é possível fazer a manipulação de bancos de dados. 
+Você pode criar um arquivo SQL em praticamente qualquer editor de texto simples, salvando com a extensão ```.sql```. 
 
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/SQL/imagens/sqlimage.png
 )
