@@ -1,5 +1,5 @@
 
-## Comandos básicos
+## Comandos básicos DDL
 ---
 
 ### 1. CREATE DATABASE
@@ -169,4 +169,21 @@ MODIFY nome CHAR(100);
 
 ## Exercícios
 ---
-1. Deveremos propor aqui algum exercisio para a validação da metodologia usada na Tutoria, que tem como proposta DIY ( Do It Yourself ), onde o aluno deverá seguir os passos e no final ele tenha que usar o que foi ensinado para validar o ensino.
+
+#### 1. Criem um novo esquema de BD.
+
+- Crie um banco chamado empresa_db
+
+- Dentro dele crie três tabelas:
+
+1. **Funcionario** (codigo, nome, endereco, telefone,
+cod_departamento)
+cod_departamento referencia Departamento
+
+2. **Departamento** (codigo, descricao)
+
+3. **Dependentes** (codigo, cod_funcionario, nome,
+data_nasc)
+
+    cod_funcionario referencia Funcionario
+    

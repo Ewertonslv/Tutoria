@@ -23,8 +23,6 @@ Você pode criar um arquivo SQL em praticamente qualquer editor de texto simples
 ![](https://github.com/Ewertonslv/Tutoria/blob/main/SQL/imagens/sqlimage.png
 )
 
-Neste tutorial será abordado o **SQL DDL** (Linguagem de definição de dados), é uma das partes que completam o SQL. É um conjunto de instruções usado para criar e modificar as estruturas dos objetos armazenados no banco de dados.
-
 ## Bancos de dados mais famosos:
 ---
 
@@ -51,25 +49,6 @@ Neste tutorial será abordado o **SQL DDL** (Linguagem de definição de dados),
 |date| data: aaaa/mm/dd||
 |time|hora: hh:mm:ss||
 |datetime|Combinação de data e hora. Formato: aaaa-mm-dd hh: mm: ss||
-
-## DDL - Data Definition Language - Linguagem de definição de dados  
----
-
-São instruçãoes SQL para criar/alterar/excluir estruturas de um banco de dados. 
-
-São 3 os comandos básicos DDL:
-
-- CREATE 
-
-    Comando utilizado para criar os principais objetos em um banco de dados.
-
-- DROP 
-
-É utilizado para exçlusão de estruturas.
-
-- ALTER
-
-Permite que você altere os atributos de uma determinada tabela ou adicione novos atributos.
 
 ### Cláusulas
 
@@ -117,10 +96,6 @@ Permite que você altere os atributos de uma determinada tabela ou adicione novo
 |Menor ou igual a|<=|Retorna verdadeiro caso o primeiro valor seja menor ou igual ao segundo.|
 |Maior ou igual a|>=|Retorna verdadeiro caso o primeiro valor seja maior ou igual ao segundo.|
 
-
-
-
-
 ### Regras de integridade (Constraints) 
 
 São regras aplicadas as colunas de uma tabela, usadas para limitar os tipos de dados que são inseridos, e assim evitam que dados inválidos sejam inseridos no banco.
@@ -161,11 +136,11 @@ Identifica de forma única uma tabela no banco de dados. Não pode possuir valor
     ```SQL
     CREATE TABLE estudante (
 	nome char(15) NOT NULL,
-	id-estudante (10) NOT NULL,
-	PRIMARY KEY (id-estudante));
+	id_estudante (10) NOT NULL,
+	PRIMARY KEY (id_estudante));
     ```
 
-No exemplo acima, a **chave primária** "id-estudante" referencía toda a tabela "estudante". 
+No exemplo acima, a **chave primária** "id_estudante" referencía toda a tabela "estudante". 
 
 
 ➤ **FOREIGN KEY**
