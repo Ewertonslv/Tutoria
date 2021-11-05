@@ -216,7 +216,7 @@ Para **remover o valor padrão** basta fazer um ALTER TABLE sem a restrição DE
      
 - Exemplo 
      
-     ```
+     ```SQL
      ALTER TABLE empregado
      MODIFY COLUMN endereco Varchar(50);
      ```

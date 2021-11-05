@@ -1,6 +1,20 @@
-
-## Comandos básicos DDL
+## DDL - Data Definition Language - Linguagem de definição de dados  
 ---
+Neste tutorial será abordado o **SQL DDL** (Linguagem de definição de dados), é uma das partes que completam o SQL. É um conjunto de instruções usado para criar e modificar as estruturas dos objetos armazenados no banco de dados.
+
+São 3 os comandos básicos DDL:
+
+- CREATE 
+
+Comando utilizado para criar os principais objetos em um banco de dados.
+
+- DROP 
+
+É utilizado para exçlusão de estruturas.
+
+- ALTER
+
+Permite que você altere os atributos de uma determinada tabela ou adicione novos atributos.
 
 ### 1. CREATE DATABASE
 
