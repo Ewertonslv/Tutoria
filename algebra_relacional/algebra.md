@@ -58,9 +58,8 @@ Condição: < atributo > < op > < constante > ou < atributo > < op > < atributo 
 
 Na condição pode ser utilizado os conectivos booleanos AND, OR e NOT. 
 
-**Tabela Alunos**
+**Alunos**
 
-Alunos (id, nome, sexo)
 |id	|nome	|sexo|
 |:---: |:----:| :----:|
 |1| 	Manoel|	M|
@@ -88,6 +87,7 @@ Alunos (id, nome, sexo)
 |:---: |:----:| :----:
 |2 	|Jasmin	|F|
 |3	|Augusto|	M|
+
 ### 2. Projeção 
 
 - Sintaxe
@@ -111,6 +111,53 @@ Alunos (id, nome, sexo)
 - Sintaxe
 
 ```relação1 - relação2 ( R1 - R2 )```
+
+É importante reforçar que a diferença da primeira menos a segunda não é a mesma do seu inverso, isto é, da segunda menos a primeira. Com isso, esta operação de diferença não é comutativa.
+
+**Alunos**
+
+|id	|nome	|sexo|
+|:---: |:----:| :----:|
+|1| 	Manoel|	M|
+|2 	|Pricila	|F|
+|3	|Augusto|	M|
+|4	|Janete	|F|
+|5| Paula| F|
+
+**Professores**
+
+|id	|nome	|sexo|
+|:---: |:----:| :----:|
+|10| 	Manoel|	M|
+|20 	|Manoela	|F|
+|30	|Augusto|	M|
+|40	|Janete	|F|
+|50|Francisca|F|
+
+**Ex1.** Expresse a relação de alunos que não são professores
+
+**result = Alunos - Professores**
+
+- Resultado:
+
+|id	|nome	|sexo|
+|:---: |:----:| :----:|
+|2 	|Pricila	|F|
+|5| Paula| F|
+
+
+**Ex2.** Expresse a relação de professores que não são alunos
+
+**result = Professores - Alunos**
+
+- Resultado:
+
+|id	|nome	|sexo|
+|:---: |:----:| :----:|
+|20 	|Manoela	|F|
+|50|Francisca|F|
+
+**Note que a diferença não é comutativa.**
 
 ### 6. Produto cartesiano
 
