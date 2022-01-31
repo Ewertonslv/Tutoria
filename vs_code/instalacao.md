@@ -29,16 +29,16 @@ Se tudo ocorrer como planejado, o sistema irá retornar a versão que foi instal
 
 ### Instalação no Linux(Ubuntu)
 
-Acesse o [Site oficial](https://code.visualstudio.com/download) e faça o download da versão mais recente. Em seguida, siga o passo a passo de instalação. 
+Acesse o [Site oficial](https://code.visualstudio.com/download) e faça o download do arquivo ```.deb```. 
 
-Após baixar o arquivo com a extensão ```.deb```, execute a seguinte linha de comando no terminal:
+Após baixar o arquivo com a extensão ```.deb```, abra o diretório(no terminal) em que o arquivo foi baixado e execute a seguinte linha de comando:
 
 ```sudo apt install./nome_Arquivo_Baixado.deb```
 
 Com isso o Visual Studio Code está instalado em sua máquina.
 
 ### Adicionando ao PATH
-**PATH** é uma variável do sistema utilizada para localizar executáveis necessários na lina de comando. 
+**PATH** é uma variável do sistema utilizada para localizar executáveis necessários na linha de comando. 
 
 Para ter acesso ao comando **code** no terminal, podendo abrir as pastas diretamente do Visual Studio Code.
 
